@@ -78,12 +78,17 @@ A **public** GitHub repo with **at least 3 commits inside your 2-hour window**, 
 2. `before.png` — screenshot of the issue
 3. `after.png` — screenshot of your fix
 4. `NOTE.md` — markdown with these headings:
+
    ```markdown
    ## What I picked
+
    ## Why it's the highest-impact thing here
+
    ## What I did
+
    ## What I'd do next
    ```
+
 5. Loom URL (max 3 min, face + screen, walking through the change) in your repo's `README.md`
 
 Submit your repo + Loom + `NOTE.md` summary on the [hiring portal](https://apply.toldyouicoulddoit.com).
@@ -107,6 +112,7 @@ node scripts/setup.mjs
 ```
 
 Fine-grained:
+
 ```bash
 node scripts/seed-to-dev-store.mjs --write    # products + collections + pages + media only
 node scripts/push-theme.mjs --write           # theme only
@@ -116,19 +122,19 @@ node scripts/push-theme.mjs --write           # theme only
 
 ## Measured timing (fresh clean dev store, Win11, 1Gbps)
 
-| Step | Time |
-|---|---|
-| `git clone` | 4s |
-| Upload 162 media files (logo, hero, icons, testimonials, payment badges) | 80s |
-| Seed ~50 products + 68 collections + 17 pages + 5 articles | 65s |
-| Push + publish theme (584 files) | 130s |
-| **Total** | **~4.5 min** |
+| Step                                                                     | Time         |
+| ------------------------------------------------------------------------ | ------------ |
+| `git clone`                                                              | 4s           |
+| Upload 162 media files (logo, hero, icons, testimonials, payment badges) | 80s          |
+| Seed ~50 products + 68 collections + 17 pages + 5 articles               | 65s          |
+| Push + publish theme (584 files)                                         | 130s         |
+| **Total**                                                                | **~4.5 min** |
 
 ---
 
 ## Troubleshooting
 
-- **"REFUSED: store URL must end in *.myshopify.com"** — you put your custom domain in `.env`. Use the `*.myshopify.com` URL instead.
+- **"REFUSED: store URL must end in \*.myshopify.com"** — you put your custom domain in `.env`. Use the `*.myshopify.com` URL instead.
 - **401 on first request** — your token is wrong or you didn't tick all six scopes. Re-check step A.3.
 - **Some images don't render on the homepage** — wait a minute and reload; Shopify processes uploaded files asynchronously after the script completes.
 - **Bundle Builder page is empty** — that's intentional. It's one of the things you could fix.
@@ -159,3 +165,7 @@ Shared **solely for the TYICDI developer hiring task**. Brand, product names, co
 **You may** publish your own fix in a public GitHub repo for the sole purpose of submitting this challenge — that's how we read your work. Keep the brand assets attributed; don't claim the underlying content as your own.
 
 **You may not** use the brand, content, theme, or any derivative for commercial purposes, in a portfolio piece beyond a reference to "TYICDI hiring task", or fork it as the basis of another store.
+
+## Loom Walkthrough
+
+[Watch the fix walkthrough](https://www.loom.com/share/6818114a7a2049b085c7b8fb98f80ac0)

@@ -191,6 +191,8 @@
                     data-image="{{ product.featured_image | image_url: width: 100 }}"
                     data-series="{{ product_series }}"
                     on:click="/handleCardClick"
+                    on:keydown="/handleCardKeydown"
+                    aria-label="{{ product.title | escape }} — add to bundle"
                   >
                     {%- comment -%} Checkbox Overlay {%- endcomment -%}
                     <div class="bundle-card__checkbox">
